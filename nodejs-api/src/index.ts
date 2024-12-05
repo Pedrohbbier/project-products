@@ -31,7 +31,7 @@ app.use(cors({
 
 export const AppDataSource = new DataSource({
   type: 'mysql',
-  host: 'localhost',
+  host: process.env.DB_HOST || 'db',
   port: 3306,
   username: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',

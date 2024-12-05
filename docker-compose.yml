@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./nodejs-api
+      dockerfile: Dockerfile
+    ports:
+      - "2005:2005"
+    volumes:
+      - ./nodejs-api/uploads:/usr/src/app/uploads
+    env_file:
+      - ./nodejs-api/.env
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_HOST=0.0.0.0
+
+  db:
+    image: mysql:8
+    container_name: mysql-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: project_web
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
