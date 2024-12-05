@@ -59,18 +59,7 @@ cd nodejs-api
 
 Create a `.env` file:
 ```bash
-touch .env
-```
-
-Add the following content to the `.env` file:
-```env
-PORT=2005
-JWT_SECRET=wdaidjoiadbuhb # This can be any random string, e.g., sdflkjsdflkjadahwd
-DB_HOST=db
-DB_PORT=3306
-DB_USER=user
-DB_PASSWORD=password
-DB_NAME=project_web
+cp .env.example .env
 ```
 
 #### **Frontend**
@@ -82,12 +71,7 @@ cd ../frontend
 
 Create a `.env` file:
 ```bash
-touch .env
-```
-
-Add the following content to the `.env` file:
-```env
-VITE_BACKEND_URL=http://localhost:2005
+cp .env.example .env
 ```
 
 ### 3. **Build and Run with Docker**
@@ -99,7 +83,7 @@ cd ..
 
 Build and run the Docker containers:
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 ### **Accessing the Application**
