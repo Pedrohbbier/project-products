@@ -44,8 +44,8 @@ Before starting, ensure you have the following installed:
 
 ### 1. **Clone the Repository**
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/Pedrohbbier/project-products.git
+cd project-products
 ```
 
 ### 2. **Configure Environment Variables**
@@ -115,15 +115,6 @@ Backend APIs are hosted at:
 ```
 http://localhost:2005
 ```
-
-#### **Database (phpMyAdmin)**
-View and manage the database at:
-```
-http://localhost:8080
-```
-Use the following credentials:
-- **Username**: user
-- **Password**: password
 
 ---
 

@@ -1,4 +1,3 @@
-frontend/package.json
 nodejs-api/node_modules
 /frontend2/node_modules
 .env
